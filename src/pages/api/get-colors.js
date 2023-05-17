@@ -29,11 +29,11 @@ async function convertToPNG(imageUrl) {
 async function getColorFromImage(imageUrl) {
   const palette = await Vibrant.from(imageUrl).getPalette();
   const dominantColor =
+    palette.DarkMuted ||
     palette.DarkVibrant ||
     palette.LightMuted ||
     palette.Muted ||
     palette.Vibrant ||
-    palette.DarkMuted ||
     palette.LightVibrant;
   return dominantColor.hex;
 }

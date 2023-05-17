@@ -29,8 +29,8 @@ async function convertToPNG(imageUrl) {
 async function getColorFromImage(imageUrl) {
   const palette = await Vibrant.from(imageUrl).getPalette();
   const dominantColor =
-    palette.LightMuted ||
     palette.DarkMuted ||
+    palette.LightMuted ||
     palette.DarkVibrant ||
     palette.Muted ||
     palette.Vibrant ||

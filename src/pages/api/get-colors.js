@@ -35,5 +35,16 @@ async function getColorFromImage(imageUrl) {
     palette.Muted ||
     palette.Vibrant ||
     palette.LightVibrant;
-  return dominantColor.hex;
+
+  const colorObject = {
+    vibrant: palette.Vibrant.hex,
+    lightVibrant: palette.LightVibrant.hex,
+    darkVibrant: palette.DarkVibrant.hex,
+    muted: palette.Muted.hex,
+    lightMuted: palette.LightMuted.hex,
+    darkMuted: palette.DarkMuted.hex,
+    dominant: dominantColor.hex,
+  };
+
+  return colorObject;
 }
